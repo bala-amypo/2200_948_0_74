@@ -15,5 +15,12 @@ public class studentController{
     studentService service;
 
     @GetMapping("/getallservice")
-    public list<>
+    public list<studentEntity>getAll(){
+        return service.getall();
+    }
+    @posMapping("/add")
+
+    public studentEntity addstudent(@Valid @requestBody studentEntity student){
+        return service.addStudent(student);
+    }
 }
